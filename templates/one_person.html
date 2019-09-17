@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Jisun's page</title>
+</head>
+<body>
+{% if name %}
+    <h1>Hello {{ name }}??</h1>
+    <p> The amount is {{ bank_details[name]['amount'] }}</p>
+    <p> The bank is {{ bank_details[name]['bank_name'] }} </p>
+{% else %}
+    <h1>None</h1>
+{% endif %}
+
+
+</body>
+</html>

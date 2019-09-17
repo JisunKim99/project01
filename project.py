@@ -17,16 +17,12 @@ def home(name=None):
 
     else:
         bank_details = account_info()
-        one_person = bank_details[name]
-        amount = one_person['amount']
-        bank_name= one_person['bank_name']
-
-
         return render_template(
             'one_person.html',
-            amount = amount,
-            bank_name = bank_name,
-            person_name = name
+            bank_details=bank_details,
+            name=name
             )
 
 
+if __name__ == '__main__':
+    app.run(debug=True)
