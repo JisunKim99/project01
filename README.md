@@ -1,2 +1,2 @@
 # project01
-Project with Jimmy
+Project with Jimmy. This  is fun.
