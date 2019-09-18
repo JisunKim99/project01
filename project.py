@@ -4,14 +4,20 @@ from account import account_info
 app = Flask(__name__)
 
 
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template('home.html')
+
+
 @app.route('/bank/')
 @app.route('/bank/<name>')
-def home(name=None):
+def bank(name=None):
 
     if name == None:
         bank_details = account_info()
         return render_template(
-            'home.html',
+            'bank.html',
             bank_details=bank_details
             )
 

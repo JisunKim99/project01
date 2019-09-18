@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for a in bank_details %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="/bank/">{{ a }}</a>
+            </div>
+            <h4>Balance: ${{ bank_details[a]['amount'] }}</h4>
+            <p class="article-content"> Bank: {{ bank_details[a]['bank_name'] }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
